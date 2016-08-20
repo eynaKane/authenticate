@@ -1,0 +1,24 @@
+<div>
+  <div>
+    <h1>Photos</h1>
+  </div>
+</div>
+<div class="photos">
+  <div class="container">
+
+    <h2><%= @album.title %></h2>
+    <div class="row">
+      <% @photos.each do |photo|%>
+        <div class="item col-md-4">
+          <div class="img-container">
+            <%= image_tag photo.image %>
+          </div>
+          <div class="photo-info">
+            <p><%= photo.caption %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+  </div>
+</div>
